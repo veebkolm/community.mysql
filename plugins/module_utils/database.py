@@ -48,7 +48,7 @@ _PG_IDENTIFIER_TO_DOT_LEVEL = dict(
     sequence=3,
     publication=1,
 )
-_MYSQL_IDENTIFIER_TO_DOT_LEVEL = dict(database=1, table=2, column=3, role=1, vars=1)
+_MYSQL_IDENTIFIER_TO_DOT_LEVEL = dict(database=64, table=64, column=64, role=64, vars=64)
 
 
 def _find_end_quote(identifier, quote_char):
