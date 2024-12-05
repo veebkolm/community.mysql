@@ -365,7 +365,7 @@ executed_commands = []
 def db_exists(cursor, db):
     res = 0
     for each_db in db:
-        res += cursor.execute("SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME = %s" % mysql_quote_identifier(each_db, 'database').replace('%', '%%'), (each_db,))
+        res += cursor.execute("SELECT SCHEMA_NAME FROM information_schema.SCHEMATA WHERE SCHEMA_NAME = %s" % mysql_quote_identifier(each_db, 'database'))
     return res == len(db)
 
 
